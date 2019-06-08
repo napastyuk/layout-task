@@ -1,7 +1,5 @@
 var gulp = require('gulp'), // Подключаем Gulp
     browserSync = require('browser-sync'), // Подключаем Browser Sync
-    rename = require('gulp-rename'), // Подключаем библиотеку для переименования файлов
-    cssnano = require('gulp-cssnano'), // Подключаем пакет для минификации CSS
     autoprefixer = require('gulp-autoprefixer');// Подключаем библиотеку для автоматического добавления префиксов
 
 gulp.task('browser-sync', function () { // Создаем таск browser-sync
@@ -23,11 +21,9 @@ gulp.task('css', function () {
         .pipe(browserSync.reload({ stream: true }))
 });
 
-gulp.task('css-min', function () {
+gulp.task('css-prefix', function () {
     return gulp.src('app/css/*.css') // Выбираем файл для минификации
         .pipe(autoprefixer(['last 2 versions', '> 1%'], { cascade: true })) // Создаем префиксы
-        .pipe(cssnano()) // Сжимаем
-        .pipe(rename({ suffix: '.min' })) // Добавляем суффикс .min
         .pipe(gulp.dest('app/css')) // Выгружаем в папку app/css
 });
 
@@ -37,4 +33,4 @@ gulp.task('watch', function () {
 });
 
 gulp.task('default', gulp.parallel('browser-sync', 'watch'));
-gulp.task('build', gulp.parallel('css-min', 'browser-sync', 'watch'));
+gulp.task('build', gulp.parallel('css-prefix', 'browser-sync', 'watch'));

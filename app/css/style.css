@@ -40,8 +40,12 @@ html {
   list-style:none;
   padding:0;
   margin:0;
+  display:-webkit-box;
+  display:-ms-flexbox;
   display:flex;
-  justify-content:center;
+  -webkit-box-pack:center;
+      -ms-flex-pack:center;
+          justify-content:center;
 }
 
 .topMenu-item {
@@ -71,6 +75,7 @@ html {
 .topMenu-background {
     height: 3rem;
     background-color: #fff;
+    position: -webkit-sticky;
     position: sticky;
     top: 0px;
     width: 100%;
@@ -96,7 +101,10 @@ html {
     .mobmenu-input + label {
       display: inline-block;
       cursor: pointer;
-      user-select: none;
+      -webkit-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none;
       line-height: 3rem;
       height: 3rem;
     }
@@ -121,12 +129,19 @@ html {
     }
 
     .mobmenu-input:checked ~ .topMenu-list {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      flex-direction: column;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
       height: 100vh;
       margin-top: -4rem;
       background-color: white;
-      justify-content: flex-start;
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
       padding-top: 4rem;
       max-width: 50%;
     }
@@ -190,6 +205,7 @@ html {
 
 #firstScreen {
   background-color: #6c7a7d;
+  background: -webkit-gradient(linear, left top, left bottom, from(#6c7a7d),color-stop(2%, #6a787b),color-stop(8%, #6b797c),color-stop(11%, #6e7c7f),color-stop(12%, #747f83),color-stop(14%, #778286),color-stop(20%, #858e93),color-stop(21%, #868d93),color-stop(24%, #8d949a),color-stop(27%, #939aa0),color-stop(34%, #99a0a6),color-stop(36%, #949ba1),color-stop(38%, #8f999b),color-stop(40%, #7d888a),color-stop(45%, #2d464a),color-stop(46%, #1e3b41),color-stop(47%, #17353d),color-stop(48%, #0a2b34),color-stop(49%, #092a33),color-stop(51%, #0b2c35),color-stop(52%, #0a2b32),color-stop(53%, #05262d),color-stop(54%, #05232d),color-stop(56%, #07252f),color-stop(58%, #02202a),color-stop(59%, #011d28),color-stop(60%, #031f2a),color-stop(61%, #011d28),color-stop(64%, #07252f),color-stop(65%, #082630),color-stop(67%, #031f2a),color-stop(68%, #05232b),color-stop(69%, #0a2830),color-stop(71%, #0d2a30),color-stop(72%, #1a373b),color-stop(73%, #325050),color-stop(75%, #0a2327),color-stop(76%, #0c2529),color-stop(79%, #00191d),color-stop(81%, #061f24),color-stop(82%, #021b22),color-stop(84%, #021b20),color-stop(85%, #031f22),color-stop(87%, #153230),color-stop(88%, #051f1e),color-stop(89%, #031b1d),color-stop(94%, #000f17),color-stop(95%, #00131a),color-stop(96%, #071b22),color-stop(98%, #01151c),to(#01121a));
   background: linear-gradient(to bottom, #6c7a7d 0%,#6a787b 2%,#6b797c 8%,#6e7c7f 11%,#747f83 12%,#778286 14%,#858e93 20%,#868d93 21%,#8d949a 24%,#939aa0 27%,#99a0a6 34%,#949ba1 36%,#8f999b 38%,#7d888a 40%,#2d464a 45%,#1e3b41 46%,#17353d 47%,#0a2b34 48%,#092a33 49%,#0b2c35 51%,#0a2b32 52%,#05262d 53%,#05232d 54%,#07252f 56%,#02202a 58%,#011d28 59%,#031f2a 60%,#011d28 61%,#07252f 64%,#082630 65%,#031f2a 67%,#05232b 68%,#0a2830 69%,#0d2a30 71%,#1a373b 72%,#325050 73%,#0a2327 75%,#0c2529 76%,#00191d 79%,#061f24 81%,#021b22 82%,#021b20 84%,#031f22 85%,#153230 87%,#051f1e 88%,#031b1d 89%,#000f17 94%,#00131a 95%,#071b22 96%,#01151c 98%,#01121a 100%); 
   background-repeat: no-repeat;
   background-size: cover;
@@ -219,7 +235,8 @@ html {
   position:absolute;
   bottom: 4.5vh;
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 #firstScreen .scrollHint-arrow {
@@ -245,16 +262,25 @@ html {
 /*#aboutMe*/
 #aboutMe {
   background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .aboutMe-leftPart {
   width: calc(50% - 3px);
   height: calc(100vh - 7rem);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .aboutMe-image {
@@ -262,7 +288,8 @@ html {
 }
 
 .aboutMe-image > img {
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   max-width: 100%;
   max-height: 100%;
   height: 70vh;
@@ -272,10 +299,17 @@ html {
 .aboutMe-rightPart {
   width: calc(50% - 3px);
   height: calc(100vh - 7rem);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   vertical-align: top;
-  flex-direction: column;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .aboutMe-header {
@@ -297,14 +331,21 @@ html {
 
 @media (max-width: 900px) {
     #aboutMe {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
       height: auto;
     }
 
     .aboutMe-leftPart {
-      justify-content: center;
-      align-items: center;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
       width: 100%;
       height: auto;
     }
