@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Test task for Mygenta</title>
+
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <nav class="topMenu">
+        <input class="mobmenu-input" type="checkbox" id="click" />
+        <label for="click">
+            <span class="mobmenu-icon">&#8734;&nbsp;</span>
+            <span class="mobmenu-caption">MENU</span>
+        </label>
+        <ul class="topMenu-list">
+            <li class="topMenu-item"><a href="#firstScreen">home</a></li>
+            <li class="topMenu-item"><a href="#aboutMe">about me</a></li>
+            <li class="topMenu-item"><a href="#portfolio">portfolio</a></li>
+            <li class="topMenu-item"><a href="#">contact</a></li>
+        </ul>
+        <div class="topMenu-border"></div>
+    </nav>
+
+    <section id="firstScreen" class="section-wrapper">
+        <div class="scrollHint-wrapper">
+            <a href="#aboutMe">
+                <span class="scrollHint-title">scroll down to see more</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" class="scrollHint-arrow" width="32"
+                    height="32">
+                    <path
+                        d="M17.707 16.798L2.917 2.008.084 4.845C5.81 10.459 12.729 17.49 17.718 22.479L35.509 4.688 32.663 1.84z" />
+                    <path
+                        d="M17.707 29.802l-14.79-14.79-2.834 2.836c5.727 5.614 12.646 12.645 17.635 17.635L35.509 17.69l-2.846-2.846z" />
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <section id="aboutMe" class="section-wrapper">
+        <div class="topMenu-background"></div>
+        <div class="aboutMe-leftPart">
+            <picture class="aboutMe-image">
+                <source srcset="img/aboutMe-image.webp" type="image/webp">
+                <img src="img/aboutMe-image.jpg" alt="Jason Wood"/>
+            </picture>
+        </div>
+        <div class="aboutMe-rightPart">
+            <div class="aboutMe-header">About Me</div>
+            <div class="aboutMe-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tempus auctor
+                ligula, et feugiat nunc facilisis non. Curabitur varius augue mauris, non euismod diam hendrerit vitae.
+                Nulla sed ultrices nulla. Nunc sed neque eu mauris venenatis elementum.</div>
+            <div class="aboutMe-caption">Jason Wood</div>
+        </div>
+        <div class="scrollHint-wrapper">
+            <a href="#portfolio">
+                <span class="scrollHint-title">keep scrolling, there is still more to come</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" class="scrollHint-arrow" width="32"
+                    height="32">
+                    <path
+                        d="M17.707 16.798L2.917 2.008.084 4.845C5.81 10.459 12.729 17.49 17.718 22.479L35.509 4.688 32.663 1.84z" />
+                    <path
+                        d="M17.707 29.802l-14.79-14.79-2.834 2.836c5.727 5.614 12.646 12.645 17.635 17.635L35.509 17.69l-2.846-2.846z" />
+                </svg>
+            </a>
+        </div>
+    </section>
+
+
+    <section id="portfolio" class="section-wrapper">
+        <div class="topMenu-background"></div>
+        <div class="oneMore-content"></div>
+        </div>
+    </section>
+
+</body>
+
+</html>
+
